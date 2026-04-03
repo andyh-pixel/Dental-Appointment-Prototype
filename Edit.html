@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit/Delete</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg px-4">
+    <a class="navbar-brand fw-semibold text-dark" href="index.html">Dental Clinic Appointment</a>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Book Appointment</a></li>
+      <li class="nav-item"><a class="nav-link" href="Schedule.html">Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" href="Login.html">Login</a></li>
+      <li class="nav-item"><a class="nav-link" href="Register.html">Register</a></li>
+    </ul>
+  </nav>
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm">
+          <h5 class="fw-semibold mb-1">Manage your booking</h5>
+          <p class="text-muted mb-4" style="font-size:13px">Update your appointment details or cancel your booking.</p>
+ 
+          <!-- CURRENT BOOKING INFO -->
+           <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Select your appointment
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Appointment 1</a></li>
+    <li><a class="dropdown-item" href="#">Appointment 2</a></li>
+    <li><a class="dropdown-item" href="#">Appointment 3</a></li>
+  </ul>
+</div>
+          
+          <hr class="my-3"/>
+ 
+          <!-- EDIT SECTION -->
+          <p class="small fw-medium mb-3">Edit appointment</p>
+ 
+          <div class="mb-3">
+            <label class="form-label small fw-medium">Doctor</label>
+            <select class="form-select form-select-sm">
+              <option value="">— Select doctor —</option>
+              <option>Dr. Sarah Ahmed</option>
+              <option>Dr. James Liu</option>
+              <option>Dr. Maria Costa</option>
+            </select>
+          </div>
+ 
+          <div class="mb-3">
+            <label class="form-label small fw-medium">Service</label>
+            <select class="form-select form-select-sm">
+              <option value="">— Select service —</option>
+              <option>General Checkup</option>
+              <option>Teeth Whitening</option>
+              <option>Filling</option>
+              <option>Orthodontics</option>
+              <option>Root Canal</option>
+              <option>Pediatric</option>
+            </select>
+          </div>
+ 
+          <div class="row g-3 mb-4">
+            <div class="col-6">
+              <label class="form-label small fw-medium">New date</label>
+              <input type="date" class="form-control form-control-sm"/>
+            </div>
+            <div class="col-6">
+              <label class="form-label small fw-medium">New time</label>
+              <select class="form-select form-select-sm">
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+              </select>
+            </div>
+          </div>
+ 
+          <button class="btn btn-primary w-100 mb-2" onclick="saveChanges()">
+            Save changes
+            </button>
+ 
+          <hr class="my-3"/>
+ 
+          <!-- CANCEL SECTION -->
+          <p class="small fw-medium mb-2">Cancel appointment</p>
+          <p class="text-muted mb-3" style="font-size:12px">This action cannot be undone. You will receive a cancellation confirmation by email.</p>
+          <button class="btn btn-outline-danger w-100" onclick="cancelBooking()">
+            Cancel booking
+            </button>
+ 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+     function saveChanges() {
+    alert("Your appointment changes have been saved.");
+  }
+
+  function cancelBooking() {
+    const confirmCancel = confirm("Are you sure you want to cancel your appointment? This cannot be undone.");
+
+    if (confirmCancel) {
+      alert("Your appointment has been cancelled.");
+    }
+  }
+  </script>
+</body>
+</html>
