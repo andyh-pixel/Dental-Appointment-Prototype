@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Success</title>
+</head>
+
+<body>
+
+    <p id="msg"><span id="actionmsg"></span>&nbsp;successful! Redirecting...</p>
+
+    <script>
+        function showActionFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const actionmsg = params.get("action");
+
+            if (actionmsg) {
+                document.getElementById("actionmsg").innerText = actionmsg;
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            showActionFromUrl();
+        });
+
+        setTimeout(function () {
+            window.location.href = "book.html";
+        }, 3000); // 3 seconds
+    </script>
+
+</body>
+
+</html>
