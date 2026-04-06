@@ -1,3 +1,5 @@
+Names: Bahareh Azmi, Shanique Francis, Farnaz Shokri, Thanh Duy (Andy) Hoang
+
 Description: Web application for dental appointment system. Functionality includes book, edit, delete appointments, create accounts and Log in.
 
 Limitations: Login and register are the only ones that are functional with the Database. Booking, editing, canceling are UI only.
