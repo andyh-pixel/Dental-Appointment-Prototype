@@ -1,0 +1,13 @@
+### TEST REGISTER ###
+POST http://localhost:8080/dental_demo/register HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+username=testuser&password=testpass
+##################
+
+### TEST LOGIN ###
+POST http://localhost:8080/dental_demo/login HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+username=testuser&password=testpass
+##################
