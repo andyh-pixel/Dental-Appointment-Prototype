@@ -27,7 +27,11 @@ Start:
 Stop:
 ./stop.sh
 ***************
-
+Members:
+Andy Hoang: andy2004@my.yorku.ca
+Bahareh Azmi: bahare@my.yorku.ca
+Farnaz Shokri: fshokri@my.yorku.ca
+Shanique Francis: shanfran@my.yorku.ca
 *** Test ***
 On a browser (preferably in incognito mode), open the following URL:
 http://localhost:8080/dental_demo/index.html
