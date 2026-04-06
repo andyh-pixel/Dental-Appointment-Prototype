@@ -52,6 +52,10 @@ BACK-END:
     Appointment.java
     DataStore.java
     User.java
+  Package dao (Data access object):
+  
+    UserDAO.java
+    UserDAOImpl.java
   Package Service:
   
     BookingService.java
@@ -61,13 +65,15 @@ src/main/webapp
 
     index.html
   
-    Login.html
+    login.html
   
-    Register.html
+    register.html
   
-    Edit.html
+    edit.html
   
-    Schedule.html
+    book.html
+
+    success.html
   
 src/main/webapp
 
